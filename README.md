@@ -11,13 +11,15 @@ You'll need a Raspberry Pi, a power supply, a USB Keyboard and Mouse, and an HDM
 Once everything is installed and running, if you are using the Raspian Desktop version, open a terminal.
 On Raspian Lite, just log in as usual.
 
+I highly recommend running `sudo raspi-config` and selecting `Localisation Options` and setting your keyboard to your locale.
+
 Connect to the internet, on Desktop this is fairly straightforward using wireless connection icons at the upper right of the screen.
 
 On Lite, follow the instructions here: https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
 
 Then, to turn your Raspberry Pi into a QTUM Stake Box, simply copy and paste this code into your terminal:
 
-`wget https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/install_qtum.bash | sudo bash`
+`curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/install_qtum.bash | sudo bash`
 
 Once that's done, it will prompt you to reboot. On reboot, the qtumd daemon will run, and will take a bit to fully connect to the QTUM network and become a node.
 

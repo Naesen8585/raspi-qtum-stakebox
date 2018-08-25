@@ -33,7 +33,10 @@ sudo apt-get update
 
 echo "Installing qtum..."
 
-sudo apt-get install qtum
+sudo apt-get install qtum -y
+
+echo "Starting the qtum daemon..."
+qtumd -daemon
 
 echo "Now we are going to set up the qtum service so that when the system starts (like after a power failure)"
 echo "QTUM Staking will immediately start."
@@ -52,6 +55,6 @@ echo "To access the commands you can run, use 'qtum-cli help'"
 echo "To finish installation and ensure everything is functioning properly,"
 echo "We'll need to reboot your pi. Press Enter to do so."
 
-read throwawayvar
+read -p "Press enter to Reboot your Pi"
 
 sudo reboot
