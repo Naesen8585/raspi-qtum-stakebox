@@ -21,7 +21,7 @@ I recommend running a `sudo reboot` after following those instructions to make s
 
 Then, to turn your Raspberry Pi into a QTUM Stake Box, simply copy and paste this code into your terminal:
 
-`curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/install_qtum.bash | sudo bash`
+`curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/install_qtum.bash | bash`
 
 Once that's done, it will prompt you to reboot. On reboot, the qtumd daemon will run, and will take a bit to fully connect to the QTUM network and become a node.
 

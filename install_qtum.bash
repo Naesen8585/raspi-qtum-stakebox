@@ -36,7 +36,8 @@ echo "Installing qtum..."
 sudo apt-get install qtum -y
 
 echo "Starting the qtum daemon..."
-/usr/local/bin/qtumd -daemon=1 -maxconnections=24 -rpcallowip=0.0.0.0/0 -rpcbind=127.0.0.1 -server -rpcport=3889 -onlynet=ipv4
+sudo apt-get update
+qtumd -daemon=1 -maxconnections=24 -rpcallowip=0.0.0.0/0 -rpcbind=127.0.0.1 -server -rpcport=3889 -onlynet=ipv4
 
 echo "DEBUG: Checking the home directory to determine the .qtum directory has been created"
 ls -a /home/pi
@@ -46,8 +47,10 @@ echo "QTUM Staking will immediately start."
 
 curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/qtumd.service | sudo tee -a /etc/systemd/system/qtumd.service
 
-sudo systemctl enable qtumd.service
 sudo systemctl daemon-reload
+sudo systemctl enable qtumd.service
+sudo systemctl start qtumd.service
+
 echo "Service enabled!"
 echo "At this point, qtumd is installed on your system."
 echo "To access the commands you can run, use 'qtum-cli help'"
