@@ -26,7 +26,9 @@ Once that's done, it will prompt you to reboot. On reboot, the qtumd daemon will
 In the meantime, run `qtum-cli help` in a terminal to check out the commands you can run. The most common ones you're likely going to run are:
 
 `qtum-cli getaccountaddress ""` --> returns the QTUM Address you can send QTUM tokens to
+
 `qtum-cli getwalletinfo` --> reports your balance in your wallet
+
 `qtum-cli getstakinginfo` --> reports what QTUM you are currently staking
 
 After this, you can keep the Raspberry Pi plugged in to the power supply, put it somewhere secure and connected to the internet, back up your wallet somewhere secure, and you are now staking QTUM!
