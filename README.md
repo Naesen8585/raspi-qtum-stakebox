@@ -34,3 +34,6 @@ In the meantime, run `qtum-cli help` in a terminal to check out the commands you
 `qtum-cli getstakinginfo` --> reports what QTUM you are currently staking
 
 After this, you can keep the Raspberry Pi plugged in to the power supply, put it somewhere secure and connected to the internet, back up your wallet somewhere secure, and you are now staking QTUM!
+
+
+For more information, see https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/
