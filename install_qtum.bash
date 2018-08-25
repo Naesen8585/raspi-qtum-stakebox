@@ -35,10 +35,10 @@ echo "Installing qtum..."
 
 sudo apt-get install qtum -y
 
-echo "Starting the qtum daemon..."
-curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/run-qtum-daemon.sh | bash
-echo "DEBUG: Checking the home directory to determine the .qtum directory has been created"
-ls -a /home/pi
+#echo "Starting the qtum daemon..."
+#curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/run-qtum-daemon.sh | bash
+#echo "DEBUG: Checking the home directory to determine the .qtum directory has been created"
+#ls -a /home/pi
 
 echo "Now we are going to set up the qtum service so that when the system starts (like after a power failure)"
 echo "QTUM Staking will immediately start."
