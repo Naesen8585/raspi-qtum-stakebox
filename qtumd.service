@@ -1,0 +1,18 @@
+[Unit]
+Description=Qtum daemon service
+After=network.target
+
+[Service]
+Type=forking
+User=pi
+WorkingDirectory=/home/pi/qtum-wallet
+ExecStart=/usr/local/bin/qtumd -daemon=1 -maxconnections=24 -rpcallowip=0.0.0.0/0 -rpcbind=127.0.0.1 -server -rpcport=3889 -onlynet=ipv4
+
+PIDFile=/home/pi/.qtum/qtumd.pid
+Restart=always
+RestartSec=1
+KillSignal=SIGQUIT
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
