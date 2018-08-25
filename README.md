@@ -35,5 +35,8 @@ In the meantime, run `qtum-cli help` in a terminal to check out the commands you
 
 After this, you can keep the Raspberry Pi plugged in to the power supply, put it somewhere secure and connected to the internet, back up your wallet somewhere secure, and you are now staking QTUM!
 
+Oh yeah, and again, **back up your wallet**. It's as simple as copying the `wallet.dat` file in your `/home/pi/.qtum/` directory (note the '.') on to a flash drive, and storing it in a physical safe like you would gold. If you've got a significant amount of assets on there, I recommend multiple backup methods, such as burning to a CD, printing out the actual contents of the wallet, or even encrypting the wallet.dat file and storing it in a private AWS S3 bucket.
+
+If you lose `wallet.dat` or the key to it, there's no getting it back.
 
 For more information, see https://docs.qtum.site/en/Qtum-on-Raspberry-Pi/
