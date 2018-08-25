@@ -36,9 +36,7 @@ echo "Installing qtum..."
 sudo apt-get install qtum -y
 
 echo "Starting the qtum daemon..."
-sudo apt-get update
-qtumd -daemon=1 -maxconnections=24 -rpcallowip=0.0.0.0/0 -rpcbind=127.0.0.1 -server -rpcport=3889 -onlynet=ipv4
-
+curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/run-qtum-daemon.sh | bash
 echo "DEBUG: Checking the home directory to determine the .qtum directory has been created"
 ls -a /home/pi
 
