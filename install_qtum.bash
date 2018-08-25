@@ -38,7 +38,7 @@ sudo apt-get install qtum
 echo "Now we are going to set up the qtum service so that when the system starts (like after a power failure)"
 echo "QTUM Staking will immediately start."
 
-wget <address of qtumd.service on github here>/qtumd.service /home/pi/qtmd.service
+wget https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/qtumd.service /home/pi/qtmd.service
 
 cat /home/pi/qtumd.service | sudo tee -a /etc/systemd/systemd/qtumd.service
 
