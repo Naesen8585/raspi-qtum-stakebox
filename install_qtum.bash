@@ -10,12 +10,11 @@ raspian_version=$(lsb_release -d)
 if [[ $raspian_version = *"(stretch)"* ]]; then
   echo "You are using Raspian Stretch"
   echo "deb http://repo.qtum.info/apt/raspbian/ stretch main" | sudo tee -a /etc/apt/sources.list
-  #echo "deb http://repo.qtum.info/apt/raspbian/ stretch main" >> /etc/apt/sources.list
+
 
 elif [[ $raspbian_version = *"(jessie)"* ]]; then
   echo "You are using Raspian Jessie"
   echo "deb http://repo.qtum.info/apt/raspbian/ jessie main" | sudo tee -a /etc/apt/sources.list
-  #echo "deb http://repo.qtum.info/apt/raspbian/ jessie main" >> /etc/apt/sources.list
 
 else
   echo "You aren't using Raspian Stretch or Jessie. This can't be turned into a Raspi QTUM Stakebox."
@@ -37,8 +36,6 @@ sudo apt-get install qtum -y
 
 echo "Starting the qtum daemon..."
 curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/run-qtum-daemon.sh | bash
-#echo "DEBUG: Checking the home directory to determine the .qtum directory has been created"
-#ls -a /home/pi
 
 echo "Now we are going to set up the qtum service so that when the system starts (like after a power failure)"
 echo "QTUM Staking will immediately start."
@@ -47,7 +44,6 @@ curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/
 
 sudo systemctl daemon-reload
 sudo systemctl enable qtumd.service
-#sudo systemctl start qtumd.service
 
 echo "Service enabled!"
 echo "At this point, qtumd is installed on your system."
