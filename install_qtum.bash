@@ -36,7 +36,10 @@ echo "Installing qtum..."
 sudo apt-get install qtum -y
 
 echo "Starting the qtum daemon..."
-qtumd -daemon
+/usr/local/bin/qtumd -daemon=1 -maxconnections=24 -rpcallowip=0.0.0.0/0 -rpcbind=127.0.0.1 -server -rpcport=3889 -onlynet=ipv4
+
+echo "DEBUG: Checking the home directory to determine the .qtum directory has been created"
+ls -a /home/pi
 
 echo "Now we are going to set up the qtum service so that when the system starts (like after a power failure)"
 echo "QTUM Staking will immediately start."
