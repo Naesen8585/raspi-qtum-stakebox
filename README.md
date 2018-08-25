@@ -17,6 +17,8 @@ Connect to the internet, on Desktop this is fairly straightforward using wireles
 
 On Lite, follow the instructions here: https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
 
+I recommend running a `sudo reboot` after following those instructions to make sure everything took correctly.
+
 Then, to turn your Raspberry Pi into a QTUM Stake Box, simply copy and paste this code into your terminal:
 
 `curl -L https://raw.githubusercontent.com/Naesen8585/raspi-qtum-stakebox/master/install_qtum.bash | sudo bash`
